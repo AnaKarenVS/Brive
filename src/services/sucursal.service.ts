@@ -11,16 +11,8 @@ export class SucursalService implements SucursalService {
 
   getSucursales(){
       const heroes = [
-        {nombre: 'Dr Nice' },
-        {nombre: 'Narco' },
-        {nombre: 'Bombasto' },
-        {nombre: 'Celeritas' },
-        {nombre: 'Magneta' },
-        {nombre: 'RubberMan' },
-        {nombre: 'Dynama' },
-        {nombre: 'Dr IQ' },
-        {nombre: 'Magma' },
-        {nombre: 'Tornado' }
+        {nombre: 'A' },
+        {nombre: 'B' },
       ];
       return heroes;
 
