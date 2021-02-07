@@ -1,0 +1,31 @@
+<table class="table table-success table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Codigo de barras</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio Unitario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arrayProductos" (click)="edit(item)">
+      <th>{{item.nombre }}</th>
+      <th>{{item.codigo }}</th>
+      <th>{{item.cantidad }}</th>
+      <th>{{item.precio }}</th>
+    </tr>
+  </tbody>
+</table>
+  <div class="col-md-3">
+    <form [formGroup]="productoForm">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input matInput class="form-control" type="text" formControlName="nombre" />
+      <input matInput class="form-control"type="text" formControlName="codigo" />
+      <input matInput class="form-control"type="number" formControlName="cantidad" />
+      <input matInput class="form-control"type="text" formControlName="precio" />
+      <button type="button" class="btn btn-primary" (click)="addProducto()">Agregar</button>
+      <button type="button" class="btn btn-secondary" (click)="clearForm()">Limpiar</button>
+
+    </form>
+    {{productoForm.value | json}}
+  </div>

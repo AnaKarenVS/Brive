@@ -9,9 +9,24 @@ export class ProductoService {
 
   getProductosA(){
       const Productos = [
-        {nombre: 'Cafe legal', codigo: 10010, cantidad: 5, precio: 7},
-        {nombre: 'Chocolate Abuelita', codigo: 10011, cantidad: 6, precio: 15},
-        {nombre: 'Bonafina', codigo: 10012, cantidad: 1, precio: 12}
+        {
+          nombre: 'Cafe legal', 
+          codigo: 10010, 
+          cantidad: 5, 
+          precio: 7
+        },
+        {
+          nombre: 'Chocolate Abuelita',
+          codigo: 10011, 
+          cantidad: 6, 
+          precio: 15
+        },
+        {
+          nombre: 'Bonafina', 
+          codigo: 10012, 
+          cantidad: 1, 
+          precio: 12
+        }
       ];
       return Productos;
 
@@ -19,17 +34,29 @@ export class ProductoService {
 
   getProductosB(){
     const Productos = [
-      {nombre: 'Cafe legal', codigo: 10010, cantidad: 8, precio: 7},
-      {nombre: 'Chocolate Abuelita', codigo: 10011, cantidad: 4, precio: 15},
-      {nombre: 'Bonafina', codigo: 10012, cantidad: 2, precio: 12}
+      {
+      nombre: 'Cafe legal', 
+      codigo: 10010, 
+      cantidad: 8, 
+      precio: 7
+    },
+      {
+      nombre: 'Chocolate Abuelita', 
+      codigo: 10011, 
+      cantidad: 4, 
+      precio: 15
+    },
+    {
+      nombre: 'Bonafina', 
+      codigo: 10012, 
+      cantidad: 2, 
+      precio: 12
+    }
     ];
     return Productos;
 
 }
 
-addProducto(){
-  
-}
 
 }
 
