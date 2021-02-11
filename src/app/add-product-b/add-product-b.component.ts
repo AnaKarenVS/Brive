@@ -8,21 +8,20 @@ import { TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-add-product',
-  templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.css'],
+  selector: 'app-add-product-b',
+  templateUrl: './add-product-b.component.html',
+  styleUrls: ['./add-product-b.component.css']
 })
-export class AddProductComponent implements OnInit {
+export class AddProductBComponent implements OnInit {
   productoForm: FormGroup;
   editForm: FormGroup;
   modalRef: BsModalRef;
   modalEdit: BsModalRef;
 
-  constructor(
+  constructor(    
     private fb: FormBuilder,
     private productoService: ProductoService,
-    private modalService: BsModalService
-  ) { }
+    private modalService: BsModalService) { }
 
   ngOnInit(): void {
     this.productoForm = this.fb.group({
@@ -43,7 +42,7 @@ export class AddProductComponent implements OnInit {
     {
       nombre: 'Cafe legal',
       codigo: 10010,
-      cantidad: 5,
+      cantidad: 6,
       precio: 7,
     },
     {
@@ -55,11 +54,10 @@ export class AddProductComponent implements OnInit {
     {
       nombre: 'Bonafina',
       codigo: 10012,
-      cantidad: 1,
+      cantidad: 3,
       precio: 12,
     },
   ];
-
   edit(item: Producto, editTemplate: TemplateRef<any>) {
     this.modalEdit = this.modalService.show(editTemplate);
     this.editForm.setValue(item);

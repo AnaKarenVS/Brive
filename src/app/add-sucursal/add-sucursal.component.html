@@ -1,0 +1,25 @@
+<form>
+<mat-form-field class="example-form-field mt-5 mb-3">
+  <mat-label>Nombre sucursal</mat-label>
+  <input matInput type="text" [formControl]="sucuName" />
+  <button mat-button *ngIf="nombreSucu" matSuffix mat-icon-button aria-label="Clear" (click)="nombreSucu = ''">
+  </button>
+  <mat-error *ngIf="sucuName.hasError('required')">
+    *Campo <strong>requerido</strong>
+  </mat-error>
+</mat-form-field>
+<button mat-raised-button (click)="saveSucursal()" class="mr-5">Registrar</button>
+</form>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Sucursales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  scope="row" *ngFor="let item of sucursales; index as i">
+      <th>{{i+1}} </th>
+      <th>{{item.nombre}} </th>
+    </tr>
+  </tbody>
+</table>

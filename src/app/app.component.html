@@ -12,41 +12,10 @@
        <app-add-product></app-add-product>
         </mat-tab>
         <mat-tab label="Sucursal B">
-          <table class="table table-success table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Codigo de barras</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Precio Unitario</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of productosB">
-                <th>{{ item.nombre }}</th>
-                <th>{{ item.codigo }}</th>
-                <th>{{ item.cantidad }}</th>
-                <th>${{ item.precio }}.00</th>
-              </tr>
-            </tbody>
-          </table>
+          <app-add-product-b></app-add-product-b>
         </mat-tab>
-        <mat-tab label="Agregar Sucursal">
-          <mat-form-field class="example-form-field">
-            <mat-label>Nombre sucursal</mat-label>
-            <input matInput type="text" [(ngModel)]="nombreSucu" />
-            <button
-              mat-button
-              *ngIf="nombreSucu"
-              matSuffix
-              mat-icon-button
-              aria-label="Clear"
-              (click)="nombreSucu = ''"
-            >
-              <mat-icon>close</mat-icon>
-            </button>
-          </mat-form-field>
-          <button mat-raised-button (click)="saveSucursal()">Registrar</button>
+        <mat-tab label="Agregar Sucursales">
+          <app-add-sucursal></app-add-sucursal>
         </mat-tab>
       </mat-tab-group>
     </div>
